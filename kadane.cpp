@@ -1,5 +1,5 @@
 // this is solution to https://leetcode.com/problems/maximum-subarray/
-// DAY 1
+
 
 class Solution {
 public:

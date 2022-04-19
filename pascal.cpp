@@ -1,5 +1,4 @@
 // this is solution to https://leetcode.com/problems/pascals-triangle/
-// DAY 1
 
 
 // we need to save some results by ourselves and then we can use the output for further calculations.

@@ -1,5 +1,4 @@
 // this is solution to https://leetcode.com/problems/sort-colors/
-// DAY 1
 
 
 class Solution {
