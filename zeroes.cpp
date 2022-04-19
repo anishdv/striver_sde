@@ -1,4 +1,5 @@
 // this is solution to https://leetcode.com/problems/set-matrix-zeroes/submissions/
+// DAY 1
 class Solution {
 void setZeroes(vector<vector<int>>& mat) {
         int n=mat.size(),m=mat[0].size();
