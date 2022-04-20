@@ -8,8 +8,8 @@ public:
         int sum=0;
         for (int i=0; i<nums.size();i++){
             sum+=nums[i];
-            ans=max(ans,sum);
-            if (sum<0)sum=0;
+            ans=max(ans,sum); // even if sum is negative whether it is larger or not
+            if (sum<0)sum=0; // for negative sum we wont proceed with keeping negative sums
         }
         return ans;
         
