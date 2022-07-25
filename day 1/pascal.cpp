@@ -6,24 +6,17 @@
 class Solution {
 public:
     vector<vector<int>> generate(int numRows) {
-        vector<vector<int>> op;
-        vector<int> preTemp;
-        preTemp.push_back(1);
-        op.push_back(preTemp);
-        if (numRows==1) return op;
-        preTemp.push_back(1);
-        op.push_back(preTemp);
-        if (numRows==2) return op;
-        int level=2;
-        while (level<=numRows-1){
-            vector<int> temp(level+1,1);
-            for(int k=1; k<level;k++){
-                temp[k]=op[level-1][k-1]+op[level-1][k];
-            }
-            op.push_back(temp);
-            level++;
+        vector<vector<int>> r(numRows);
+
+        for (int i = 0; i < numRows; i++) {
+            r[i].resize(i + 1);
+            r[i][0] = r[i][i] = 1;
+  
+            for (int j = 1; j < i; j++)
+                r[i][j] = r[i - 1][j - 1] + r[i - 1][j];
         }
-        return op;
+        
+        return r;
     }
 };
 

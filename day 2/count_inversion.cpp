@@ -1,3 +1,5 @@
+// one method is by using brute approach which will take n^2 time complexity while second method is by using merge sort algo 
+
 int merge(int arr[],int temp[],int left,int mid,int right)
 {
     int inv_count=0;
