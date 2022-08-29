@@ -1,5 +1,9 @@
 // this is solution to https://leetcode.com/problems/valid-parentheses/
 
+
+
+// there should be a pair of parantheses inside a pair or nothing
+
 class Solution {
 public:
     bool isValid(string s) {

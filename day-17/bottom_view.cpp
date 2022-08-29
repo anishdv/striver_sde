@@ -44,7 +44,7 @@ void helper(int hd, int level, map<int, pair<int,int>> &mp, Node* temp){
             auto it = q.front(); 
             q.pop(); 
             Node* node = it.first; 
-            int line = it.second; 
+            int line = it.second;   
             mpp[line] = node->data; 
             
             if(node->left != NULL) {

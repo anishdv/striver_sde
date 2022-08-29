@@ -2,6 +2,7 @@
 
 int merge(int arr[],int temp[],int left,int mid,int right)
 {
+    // INSTEAD OF MAKING AN ARRAY EVERY TIME WE HAVE ALLOTED MEMORY ONE TIME AND WE JUST USE THAT
     int inv_count=0;
     int i = left;
     int j = mid;
@@ -13,18 +14,23 @@ int merge(int arr[],int temp[],int left,int mid,int right)
         else
         {
             temp[k++] = arr[j++];
-            inv_count = inv_count + (mid - i);
+            inv_count = inv_count + (mid - i); // NEXT COMING ELEMTS OF ARR1 ARE ALSO THEN GREATER THAN JTH
         }
     }
+    // --------------------------------------
 
+    // IF ONE IS EXHAUSTED WHILE OTHER IS NOT 
     while(i <= mid - 1)
         temp[k++] = arr[i++];
 
     while(j <= right)
         temp[k++] = arr[j++];
+    // --------------------------------------
 
+    // COPY TEMP BACK IN ARR
     for(i = left ; i <= right ; i++)
         arr[i] = temp[i];
+    //---------------------------------------
     
     return inv_count;
 }

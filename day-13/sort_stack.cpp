@@ -1,7 +1,7 @@
 // this is solution to https://www.codingninjas.com/codestudio/problems/sort-a-stack_985275?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website&leftPanelTab=0
 
 void sortedInsert(stack<int> &s, int num){
-    //base case => stack empty/ chota element mil jayega
+    //base case => stack empty/ sbse bda element insert krna hai
     if(s.empty() || (!s.empty() && s.top() <num )){
         //seg fault de skta hai 2nd condn
         //seedhe push kar do
@@ -21,7 +21,7 @@ void sortedInsert(stack<int> &s, int num){
 void sortStack(stack<int> &s)
 {
     //base case
-    if(s.empty()){
+    if(s.size()==1){
         //wapas aa jana hai
         return;
     }

@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/binary-tree-postorder-traversal/
 
 
-// USING ONE STACK
+// USING TWO STACK
 vector < int > postOrderTrav(node * curr) {
 
   vector < int > postOrder;
@@ -27,7 +27,7 @@ vector < int > postOrderTrav(node * curr) {
 }
 
 
-// USING 2 STACKS
+// USING ONE STACKS
 vector < int > postOrderTrav(node * cur) {
 
   vector < int > postOrder;

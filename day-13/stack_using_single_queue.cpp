@@ -7,7 +7,7 @@ public:
     MyStack() {
     }
     
-    void push(int x) {
+    void push(int x) { // tc- o(n)
         int s=q.size();
         q.push(x);
         for (int i=0; i<s; i++){
@@ -17,18 +17,18 @@ public:
         return;
     }
     
-    int pop() {
+    int pop() {//tc- o(1)
         int ans=q.front();
         q.pop();
         return ans;
     }
     
-    int top() {
+    int top() { // tc- o(1)
         int ans=q.front();
         return ans;
     }
     
-    bool empty() {
+    bool empty() { // tc- o(1)
         return q.empty();
     }
 };

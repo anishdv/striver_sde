@@ -3,6 +3,9 @@
 // Solution 1: Using two Stacks where push operation is O(N)
 //Solution 2: Using two Stacks where push operation is O(1) and pop function is amortised O(1)
 
+
+// amortised -- when push operation is o(n) , in enqueue operation it is taking 2 push and 2 pop operations and dequeue 0 such operations are there
+// but when we say we have amortised time complexity we now use only one push operation for enqueue and 3 for dequeue
 class MyQueue {
 public:
     stack<int> input, output;
@@ -10,33 +13,12 @@ public:
         
     }
     
-    void push(int x) {
-        // while(!input.empty()){
-        //     output.push(input.top());
-        //     input.pop();
-        // }
-        // input.push(x);
-        // while(!output.empty()){
-        //     input.push(output.top());
-        //     output.pop();
-        // }
-        // return;
-        
+    void push(int x) { // o(1)
         input.push(x);
         return;
     }
     
-    int pop() {
-        // int ans;
-        // if (!input.empty()){
-        //     ans=input.top();
-        //     input.pop();
-        //     return ans;
-        // }
-        // else{
-        //     cout<<"it is empty"<<endl;
-        //     return -1;
-        // }
+    int pop() { // o(1) amortised 
         
         int ans;
         if (output.empty()){
@@ -50,10 +32,8 @@ public:
         return ans;
     }
     
-    int peek() {
-        // int ans=input.top();
-        // return ans;
-        
+    int peek() { // o(1) amortised
+    
         int ans;
         if (output.empty()){
             while(!input.empty()){
@@ -65,8 +45,7 @@ public:
         return ans;
     }
     
-    bool empty() {
-        // return input.empty();
+    bool empty() { // o(1)
         
         return input.empty() && output.empty();
     }
